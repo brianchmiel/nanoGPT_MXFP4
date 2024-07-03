@@ -10,6 +10,10 @@ def mxfp4_quantization_func(input,exp,man,bias=None,stochastic=False,clip=True):
     assert exp <= 3 , "maximum exponent bits = 3"
     assert exp > 0 , "minimum exponent bits = 1"
     assert man >= 0 , "minimum mantissa bits = 0"
+    if exp == 3:
+        assert stochastic, "currently support E3M0 only with SR"
+    elif exp ==2:
+        assert not stochastic, "currently support E2M1 only without SR"
 
     #Todo - extend kernel for half and bfloat
     is_half = False
