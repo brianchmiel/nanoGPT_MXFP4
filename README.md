@@ -45,27 +45,27 @@ torchrun --standalone --nproc_per_node=8 train.py config/train_gpt2_124m_mxfp4.p
 
 | model | params | train loss | 
 | ------| ------ | ---------- | 
-| gpt2 | 124M         | 3.11  | 
-| gpt2-mxfp4 | 124M  | 2.85  | 
+| gpt2 | 124M         |  2.92 | 
+| gpt2-mxfp4 | 124M  | 3.10 | 
 
 
 In order to run a bigger model, simple add to the config file the following lines:
 
 ### GPT 350m
-n_layer = 24
-n_head = 16
-n_embd = 1024
+n_layer = 24|
+n_head = 16 |
+n_embd = 1024 |
 
 
 ### GPT 774m
-n_layer = 36
-n_head = 20
-n_embd = 1280
+n_layer = 36 |
+n_head = 20 |
+n_embd = 1280 |
 
 
 ### GPT-1.5b
 
-n_layer = 48
-n_head = 25
-n_embd = 1600
+n_layer = 48 |
+n_head = 25 |
+n_embd = 1600 |
 
